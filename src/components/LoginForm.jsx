@@ -38,7 +38,7 @@ function LoginForm(props) {
                     props.showError("Username and password do not match");
                 }
                 else{
-                    props.showError("Username does not exists");
+                    props.showError("Username does not exist");
                 }
             })
             .catch(function (error) {
@@ -66,7 +66,6 @@ function LoginForm(props) {
                        value={state.email}
                        onChange={handleChange}
                 />
-                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div className="form-group text-left">
                 <label htmlFor="exampleInputPassword1">Password</label>
@@ -84,7 +83,7 @@ function LoginForm(props) {
                     type="submit" 
                     className="btn btn-primary"
                     onClick={handleSubmitClick}
-                >Submit</button>
+                >Log in</button>
             </form>
             <div className="alert alert-success mt-2" style={{display: state.successMessage ? 'block' : 'none' }} role="alert">
                 {state.successMessage}
